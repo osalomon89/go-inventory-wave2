@@ -1,45 +1,58 @@
-# This is the same bookstore app from the "2" directory
-## Two updates are needed
+### Features:
 
-### Update 1:
-
-* Note: please ignore the commented code. 
-
-1. Update "InventoryInfo".
-2. List all the books.
+1. List all the books.
+2. Get book by ID.
 
 
-### Update 2:
+### Get all books:
 
-* Note: please uncomment the commented code. 
-
-1. Update "addBooks".
-2. Use this code to add more books to the bookstore: 
+* Response: 
 ```
-[
-    {
-        "book": {
+{
+    "status": 200,
+    "data": [
+        {
+            "id": 1,
             "author": {
-                "firstname": "Frank",
-                "lastname": "Herbert"
+                "firstname": "Jorge Luis",
+                "lastname": "Borges"
             },
-            "title": "Dune",
-            "price": 53.79,
-            "isbn": "0340960191"
+            "title": "El Aleph",
+            "price": 42.75,
+            "isbn": "84-206-1933-7",
+            "stock": 0
         },
-        "stock": 5
-    },
-    {
-        "book": {
+        {
+            "id": 2,
             "author": {
-                "firstname": "Isaac",
-                "lastname": "Asimov"
+                "firstname": "Stanislaw",
+                "lastname": "Lem"
             },
-            "title": "Fundation",
-            "price": 28.5,
-            "isbn": "0-553-29335-4"
+            "title": "Solaris",
+            "price": 65.2,
+            "isbn": "0156027607",
+            "stock": 15
+        }
+    ]
+}
+```
+
+### Get book By ID:
+
+* Response: 
+```
+{
+    "status": 200,
+    "data": {
+        "id": 1,
+        "author": {
+            "firstname": "Isaac",
+            "lastname": "Asimov"
         },
-        "stock": 1
+        "title": "Fundation",
+        "price": 28.5,
+        "isbn": "0-553-29335-4",
+        "stock": 9
     }
-]
+}
 ```
